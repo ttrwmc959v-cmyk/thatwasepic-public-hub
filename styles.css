@@ -208,8 +208,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   gap: var(--s-5);
+  min-height: min(760px, calc(100svh - clamp(var(--s-10), 9vw, var(--s-16))));
 }
 
 .hero__chip {
@@ -268,7 +270,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: 0 0.04em;
+  column-gap: 0.08em;
+  row-gap: 0;
 }
 .hero__title-part--green {
   color: transparent;
