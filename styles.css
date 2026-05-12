@@ -1,36 +1,36 @@
 /* ============================================================
    ThatWasEpic — Public Link Hub
-   Dark cinematic palette w/ Mexican flag-inspired accents
-   (verde · blanco · rojo). Mobile-first.
+   Dark cinematic palette with Mexican flag energy.
+   Verde · blanco · rojo. Mobile-first.
    ============================================================ */
 
 :root {
   /* Canvas */
-  --bg-0: #0a0d0a;          /* near-black w/ green undertone */
-  --bg-1: #0f1410;          /* card base */
-  --bg-2: #141b15;          /* elevated */
-  --ink-0: #f6f8f4;         /* off-white */
-  --ink-1: #d5dcd2;
-  --ink-2: #8a958a;
-  --ink-3: #525a52;
+  --bg-0: #090b09;          /* near-black w/ green undertone */
+  --bg-1: #101412;          /* card base */
+  --bg-2: #151b17;          /* elevated */
+  --ink-0: #f8faf6;         /* off-white */
+  --ink-1: #dce2d8;
+  --ink-2: #95a08f;
+  --ink-3: #5a6258;
 
   --line: rgba(246, 248, 244, 0.08);
   --line-strong: rgba(246, 248, 244, 0.16);
 
-  /* Tricolor — calibrated for dark UI (not flat flag swatches) */
-  --green-1: #25c46d;       /* hero green — bright but not radioactive */
-  --green-2: #14a35a;
-  --green-3: #0c6a3a;
-  --green-glow: 37, 196, 109;
+  /* Mexican flag colors, brightened slightly where needed for dark UI */
+  --green-1: #009a57;
+  --green-2: #006847;
+  --green-3: #004b34;
+  --green-glow: 0, 154, 87;
 
   --white-1: #ffffff;
   --white-2: #ecefea;
   --white-3: rgba(255, 255, 255, 0.86);
 
-  --red-1: #ff3a55;         /* hero red — vivid, not bricky */
-  --red-2: #d61f3a;
-  --red-3: #8a1224;
-  --red-glow: 255, 58, 85;
+  --red-1: #e51b35;
+  --red-2: #ce1126;
+  --red-3: #8b0d1b;
+  --red-glow: 229, 27, 53;
 
   /* Type scale */
   --t-xs: 11px;
@@ -243,11 +243,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .mark {
   margin-top: var(--s-3);
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 24px rgba(37, 196, 109, 0.18));
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 26px rgba(0, 154, 87, 0.20));
   animation: markFloat 6s ease-in-out infinite;
 }
 .mark__svg {
-  width: clamp(96px, 26vw, 140px);
+  width: clamp(168px, 48vw, 240px);
   height: auto;
   display: block;
 }
@@ -275,20 +275,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .hero__title-part--green {
   color: transparent;
-  background: linear-gradient(180deg, #5dd99a 0%, #25c46d 60%, #14a35a 100%);
+  background: linear-gradient(180deg, #28c978 0%, #009a57 58%, #006847 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 0 40px rgba(37, 196, 109, 0.18);
+  text-shadow: 0 0 40px rgba(0, 154, 87, 0.22);
 }
 .hero__title-part--white {
   color: var(--ink-0);
 }
 .hero__title-part--red {
   color: transparent;
-  background: linear-gradient(180deg, #ff7a8c 0%, #ff3a55 55%, #d61f3a 100%);
+  background: linear-gradient(180deg, #ff6a79 0%, #e51b35 52%, #ce1126 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 0 40px rgba(255, 58, 85, 0.2);
+  text-shadow: 0 0 40px rgba(229, 27, 53, 0.24);
 }
 
 .hero__lede {

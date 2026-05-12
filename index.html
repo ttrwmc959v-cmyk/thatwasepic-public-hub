@@ -61,56 +61,48 @@
           <span class="hero__chip-label">The Link Hub · Live</span>
         </div>
 
-        <!-- Crest mark: tri-stripe shield with stylized starburst (no official seal) -->
+        <!-- Waving Mexican flag-inspired mark, drawn in SVG so no image download is needed -->
         <div class="mark" aria-hidden="true">
-          <svg viewBox="0 0 140 160" class="mark__svg">
+          <svg viewBox="0 0 240 150" class="mark__svg">
             <defs>
-              <linearGradient id="greenG" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#1FAE63"/>
-                <stop offset="100%" stop-color="#0E6B3C"/>
-              </linearGradient>
-              <linearGradient id="redG" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#E53245"/>
-                <stop offset="100%" stop-color="#9E1224"/>
-              </linearGradient>
-              <linearGradient id="whiteG" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF"/>
-                <stop offset="100%" stop-color="#E8EDE8"/>
-              </linearGradient>
-              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="2.5" result="b"/>
-                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              <filter id="flagShadow" x="-30%" y="-35%" width="160%" height="180%">
+                <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
               </filter>
+              <clipPath id="flagWave">
+                <path d="M43 31 C82 10 119 49 158 28 C180 16 199 17 220 27 L220 111 C196 101 175 103 151 116 C113 137 76 94 43 115 Z"/>
+              </clipPath>
+              <linearGradient id="clothShade" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+                <stop offset="48%" stop-color="#000000" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#000000" stop-opacity="0.20"/>
+              </linearGradient>
             </defs>
 
-            <!-- Shield outline -->
-            <path
-              d="M70 4 L128 22 L128 78 C128 112 102 138 70 152 C 38 138 12 112 12 78 L12 22 Z"
-              fill="none"
-              stroke="rgba(255,255,255,0.18)"
-              stroke-width="1.2"
-            />
+            <path d="M22 24 L22 132" stroke="rgba(255,255,255,0.62)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M18 132 H44" stroke="rgba(255,255,255,0.20)" stroke-width="5" stroke-linecap="round"/>
 
-            <!-- Tri-stripe interior using clipping shield path -->
-            <clipPath id="shieldClip">
-              <path d="M70 7 L125 24 L125 78 C125 110 100 135 70 148 C 40 135 15 110 15 78 L15 24 Z"/>
-            </clipPath>
-            <g clip-path="url(#shieldClip)">
-              <rect x="15" y="0" width="37" height="160" fill="url(#greenG)"/>
-              <rect x="52" y="0" width="36" height="160" fill="url(#whiteG)"/>
-              <rect x="88" y="0" width="37" height="160" fill="url(#redG)"/>
-            </g>
+            <g filter="url(#flagShadow)">
+              <g clip-path="url(#flagWave)">
+                <rect x="43" y="0" width="59" height="150" fill="#006847"/>
+                <rect x="102" y="0" width="59" height="150" fill="#f7f7f2"/>
+                <rect x="161" y="0" width="59" height="150" fill="#ce1126"/>
+                <path d="M43 31 C82 10 119 49 158 28 C180 16 199 17 220 27 V111 C196 101 175 103 151 116 C113 137 76 94 43 115 Z" fill="url(#clothShade)"/>
+                <path d="M43 31 C82 10 119 49 158 28 C180 16 199 17 220 27" fill="none" stroke="rgba(255,255,255,0.48)" stroke-width="2"/>
+                <path d="M43 115 C76 94 113 137 151 116 C175 103 196 101 220 111" fill="none" stroke="rgba(0,0,0,0.22)" stroke-width="2"/>
+              </g>
 
-            <!-- Starburst on white stripe (abstract, not an emblem) -->
-            <g transform="translate(70 80)" filter="url(#glow)">
-              <g>
-                <path d="M0 -22 L4 -4 L22 0 L4 4 L0 22 L-4 4 L-22 0 L-4 -4 Z" fill="#0a0d0a" opacity="0.92"/>
-                <circle r="3.5" fill="#0a0d0a"/>
+              <!-- Center emblem-inspired detail: wreath, eagle-like wings, and gold crest -->
+              <g transform="translate(132 73)">
+                <ellipse cx="0" cy="7" rx="22" ry="17" fill="rgba(255,255,255,0.30)"/>
+                <path d="M-27 10 C-18 27 -2 31 15 25" fill="none" stroke="#0b8f4d" stroke-width="4" stroke-linecap="round"/>
+                <path d="M24 10 C16 27 0 31 -16 25" fill="none" stroke="#0b8f4d" stroke-width="4" stroke-linecap="round"/>
+                <path d="M-14 -7 C-4 -20 15 -18 21 -5 C10 -9 3 -7 -5 1 Z" fill="#9b6a23"/>
+                <path d="M-6 -1 C-23 -6 -28 8 -16 17 C-12 9 -7 5 2 4 Z" fill="#7a4a1a"/>
+                <path d="M4 0 C21 -3 27 10 16 18 C11 10 7 6 -2 4 Z" fill="#c3922e"/>
+                <path d="M-4 6 C3 12 11 13 18 8" fill="none" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="5" cy="-8" r="3" fill="#3a2410"/>
               </g>
             </g>
-
-            <!-- Diamond facets bridging stripes -->
-            <path d="M70 7 L70 148" stroke="rgba(10,13,10,0.25)" stroke-width="0.6"/>
           </svg>
         </div>
 
