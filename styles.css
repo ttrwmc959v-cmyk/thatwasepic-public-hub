@@ -211,7 +211,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   justify-content: center;
   text-align: center;
   gap: var(--s-5);
-  min-height: min(760px, calc(100svh - clamp(var(--s-10), 9vw, var(--s-16))));
+  min-height: 100svh;
 }
 
 .hero__chip {
