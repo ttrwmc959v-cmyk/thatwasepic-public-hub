@@ -20,6 +20,33 @@
   const shareUrl = () => window.location.href;
   const shareText = 'ThatWasEpic — every official link in one place.';
 
+  // Phone/Facebook browser-safe tap handling for every outbound card.
+  // Normal anchor tags can be blocked or swallowed in some in-app browsers,
+  // so each destination has an explicit click fallback.
+  document.querySelectorAll('[data-open-url]').forEach((el) => {
+    el.addEventListener('click', async (event) => {
+      const destination = el.getAttribute('data-open-url');
+      const emailToCopy = el.getAttribute('data-copy-email');
+      if (!destination) return;
+
+      event.preventDefault();
+
+      if (emailToCopy) {
+        try {
+          await navigator.clipboard.writeText(emailToCopy);
+          toast('Business email copied — opening Night.');
+        } catch {
+          toast('Opening Night. Email: ' + emailToCopy);
+        }
+      }
+
+      const opened = window.open(destination, '_blank', 'noopener,noreferrer');
+      if (!opened) {
+        window.location.href = destination;
+      }
+    });
+  });
+
   // Copy
   const copyBtn = document.getElementById('copyBtn');
   const copyLabel = document.getElementById('copyLabel');
