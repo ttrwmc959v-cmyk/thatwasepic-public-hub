@@ -27,7 +27,7 @@ Single-page, no build step, no external runtime dependencies beyond Google Fonts
 ## Linked destinations
 
 - YouTube — https://www.youtube.com/@ThatWasEpic11
-- Facebook — https://www.facebook.com/thatwasepic11/
+- Facebook — https://www.facebook.com/thatwasepic/
 - Instagram — https://instagram.com/thatwasepic
 - X / Twitter — https://twitter.com/thatwasepic11
 - Merch / website — https://thatwasepic.com
